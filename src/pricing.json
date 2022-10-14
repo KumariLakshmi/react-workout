@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Free",
+    "cost": "0",
+    "currency": "$",
+    "pricePer": "month",
+
+    "features": [
+      {
+        "name": "singleUser",
+        "access": true
+      },
+      {
+        "name": "is5GBStorage",
+        "access": true
+      },
+      {
+        "name": "isUnlimitedPublicProjects",
+        "access": true
+      },
+      {
+        "name": "communityAccess",
+        "access": true
+      },
+      {
+        "name": "unlimitedPrivateProjects",
+        "access": false
+      },
+      {
+        "name": "Dedicated Phone Support",
+        "access": false
+      },
+      {
+        "name": "Free Subdomain",
+        "access": false
+      },
+      {
+        "name": "Monthly Status Reports",
+        "access": false
+      },
+      {
+        "name": "Yearly Status Reports",
+        "access": true
+      }
+    ]
+  },
+  {
+    "name": "Plus",
+    "cost": "9",
+    "currency": "$",
+    "pricePer": "month",
+    "features": [
+      {
+        "name": "singleUser",
+        "access": true
+      },
+      {
+        "name": "is5GBStorage",
+        "access": true
+      },
+      {
+        "name": "isUnlimitedPublicProjects",
+        "access": true
+      },
+      {
+        "name": "communityAccess",
+        "access": true
+      },
+      {
+        "name": "unlimitedPrivateProjects",
+        "access": true
+      },
+      {
+        "name": "Dedicated Phone Support",
+        "access": true
+      },
+      {
+        "name": "Free Subdomain",
+        "access": true
+      },
+      {
+        "name": "Monthly Status Reports",
+        "access": false
+      },
+      {
+        "name": "Yearly Status Reports",
+        "access": true
+      }
+    ]
+  },
+  {
+    "name": "Pro",
+    "cost": "49",
+    "currency": "$",
+    "pricePer": "month",
+    "features": [
+      {
+        "name": "singleUser",
+        "access": true
+      },
+      {
+        "name": "is5GBStorage",
+        "access": true
+      },
+      {
+        "name": "isUnlimitedPublicProjects",
+        "access": true
+      },
+      {
+        "name": "communityAccess",
+        "access": true
+      },
+      {
+        "name": "unlimitedPrivateProjects",
+        "access": true
+      },
+      {
+        "name": "Dedicated Phone Support",
+        "access": true
+      },
+      {
+        "name": "Free Subdomain",
+        "access": true
+      },
+      {
+        "name": "Monthly Status Reports",
+        "access": true
+      },
+      {
+        "name": "Yearly Status Reports",
+        "access": false
+      }
+    ]
+  }
+]
