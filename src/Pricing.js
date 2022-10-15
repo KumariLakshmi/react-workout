@@ -2,7 +2,16 @@
 
 import React from "react";
 
-const Pricing = ({ name, currency, cost, pricePer, features }) => {
+const Pricing = ({
+  name,
+  currency,
+  cost,
+  pricePer,
+  features,
+  handleChange,
+  // change,
+}) => {
+  // console.log("change", change);
   return (
     <div className="col-lg-4">
       <div className="card mb-5 mb-lg-0">
@@ -36,9 +45,18 @@ const Pricing = ({ name, currency, cost, pricePer, features }) => {
             })}
           </ul>
           <div className="d-grid">
-            <a href="#" className="btn btn-primary text-uppercase">
+            <a
+              href="#"
+              className="btn btn-primary text-uppercase"
+              //  handleChange(name)  ===> assing the function
+              onClick={() => {
+                handleChange(name);
+              }}
+            >
               Button
             </a>
+            {/* <input type="text" name={name} onKeyPress={(event)=>{change(event)}}
+            ></input> */}
           </div>
         </div>
       </div>
