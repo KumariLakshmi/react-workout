@@ -1,0 +1,8 @@
+// app componets is parent inside to pricing compontes is child
+// passing data from parent to child using props && passing data from child to parent using props but assing function
+// key is using define by (unique) Each child in a list should have a unique "key" prop.
+//Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted — the behavior is unsupported and could change in a future version.
+
+//useState is using in reacthooks
+// <> </> this name is fragement in react
+// react must be return in one parent div or you didn't use div so use fragement

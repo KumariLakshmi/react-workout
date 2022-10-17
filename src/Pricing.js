@@ -11,6 +11,7 @@ const Pricing = ({
   handleChange,
   // change,
 }) => {
+  // console.log("props",props);
   // console.log("change", change);
   return (
     <div className="col-lg-4">

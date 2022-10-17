@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 // import logo from './logo.svg';
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Pricing from "./Pricing";
 import PRICING from "./pricing.json";
-// app componets is parent inside to pricing compontes is child
-// passing data from parent to child using props && passing data from child to parent using props but assing function
 
 // function App(props) {
+//   // console.log(props);
 //   // [OR ] using json file also
 //   // const pricing =
 //   // [
@@ -176,7 +175,6 @@ import PRICING from "./pricing.json";
 //   //   },
 //   // ];
 //   // console.log("PRICING",PRICING);
-
 //   let handleChange=(name)=>{
 //  console.log(name);
 //   }
@@ -186,11 +184,16 @@ import PRICING from "./pricing.json";
 
 //   return (
 //     <section className="pricing py-5">
+//       <h1>{props.name}</h1>
+
+//       {/* {arr.map((a) =>(
+//         <p key={a}>{a}</p>
+//       ))} */}
 //       <div className="container">
 //         <div className="row">
-//         <h1>{props.name}</h1>
+
 //           {PRICING.map((price) => (
-//             <Pricing {...price} handleChange={handleChange} change={change} />
+//             <Pricing key={price.id} {...price} handleChange={handleChange} change={change} />
 //           ))}
 //         </div>
 //       </div>
@@ -198,55 +201,65 @@ import PRICING from "./pricing.json";
 //   );
 // }
 
-// you can use this class componets to get this.prop must use the render
+// same task doing in function based
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    //state is read only
-    this.state = {
-      value: "kumari",
-    };
-  }
-  handleChange = (name) => {
-    console.log(name);
-  };
-  //   change =({target:{name,value}}) =>{
-  //    console.log(value);
-  //   this.setState({value})
-  //  }
-  seeState = () => {
-    console.log(this.state);
-  };
+function App() {
+  const [count, setCount] = useState(0); // ==> 0 is using like this let count = 0
+  const [lowerName, setLowerName] = useState("kumari"); // ==> ""  is using like this let lowerName =""
+  let [show, setShow] = useState(true);
 
-  handlePress = ({ target: { value } }) => {
-    console.log("typiing", value);
-    this.setState({ value });
+  let add = () => {
+    setCount(count + 1);
   };
-  render() {
-    console.log("render 1");
-    return (
+  let sub = () => {
+    setCount(count - 1);
+  };
+  let reset = () => {
+    setCount(0);
+  };
+  let mul = () => {
+    setCount(count * 3);
+  };
+  let changeName = ({ target: { value } }) => {
+    console.log("value", value);
+
+    setLowerName(value);
+  };
+  // const arr=["First","Second","Thrid","Fourth"];
+  return (
+    <div>
+      <button
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
+        Show/Hide
+      </button>
+      {show && (
+        <div>
+          <p> Count - {count} </p>
+          <button onClick={add}>+ </button> <button onClick={sub}>-</button>{" "}
+          <button onClick={reset}>0</button> <button onClick={mul}>*</button>{" "}
+          <br /> <br />
+          <input type="text" onChange={changeName}></input>
+          <h2>TYPE VALUE---{lowerName.toUpperCase()}</h2>
+        </div>
+      )}
+      {/* {arr.map(a=><p key={a}>{a}</p>)} */}
+
+      {/* {arr.map(a)=><></>} */}
+
       <section className="pricing py-5">
-        <h1>{this.props.name}</h1>
-
-        <input
-          type="text"
-          value={this.state.value}
-          onChange={this.handlePress}
-        ></input>
-        <h2>TYPE VALUE---{this.state.value}</h2>
-
-        <button onClick={this.seeState}>see State</button>
         <div className="container">
           <div className="row">
-            {PRICING.map((price) => (
-              <Pricing {...price} handleChange={this.handleChange} />
+            {PRICING.map((price, index) => (
+              <Pricing key={index} {...price} />
             ))}
           </div>
         </div>
       </section>
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
