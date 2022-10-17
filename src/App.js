@@ -250,6 +250,7 @@ function App() {
       {/* {arr.map(a)=><></>} */}
 
       <section className="pricing py-5">
+        <h1>NEW TASKING</h1>
         <div className="container">
           <div className="row">
             {PRICING.map((price, index) => (
